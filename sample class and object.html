@@ -1,88 +1,263 @@
-<!DOCTYPE html>
-<!-- saved from url=(0046)https://github.com/aassthaa15/Operating-System -->
-<html lang="en" data-color-mode="auto" data-light-theme="light" data-dark-theme="dark" data-a11y-animated-images="system" data-a11y-link-underlines="true" data-turbo-loaded=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">.turbo-progress-bar {
-  position: fixed;
-  display: block;
-  top: 0;
-  left: 0;
-  height: 3px;
-  background: #0076ff;
-  z-index: 2147483647;
-  transition:
-    width 300ms ease-out,
-    opacity 150ms 150ms ease-in;
-  transform: translate3d(0, 0, 0);
+1. Simple Class and object:
+
+#include <iostream>
+using namespace std;
+
+class Rectangle {
+    int width, height;
+public:
+    void set_values(int w, int h) {
+        width = w;
+        height = h;
+    }
+    int area() {
+        return width * height;
+    }
+};
+
+int main() {
+    Rectangle rect;
+    rect.set_values(5, 3);
+    cout << "Area: " << rect.area() << endl;
+    return 0;
 }
-</style>
-    
-  
-  
-  
-  
-  
-  
-
-  
-
-  <link crossorigin="anonymous" media="all" rel="stylesheet" href="./sample class and object_files/light-f13f84a2af0d.css"><link crossorigin="anonymous" media="all" rel="stylesheet" href="./sample class and object_files/dark-1ee85695b584.css"><link data-color-theme="dark_dimmed" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/dark_dimmed-8c42799cfb52.css"><link data-color-theme="dark_high_contrast" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/dark_high_contrast-dc99d916bf90.css"><link data-color-theme="dark_colorblind" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/dark_colorblind-0a83868d0e43.css"><link data-color-theme="light_colorblind" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/light_colorblind-3c798f5a8bef.css"><link data-color-theme="light_high_contrast" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/light_high_contrast-4c72a7f3b765.css"><link data-color-theme="light_tritanopia" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/light_tritanopia-222bf22536c7.css"><link data-color-theme="dark_tritanopia" crossorigin="anonymous" media="all" rel="stylesheet" data-href="https://github.githubassets.com/assets/dark_tritanopia-c1d9496197fa.css">
-    <link crossorigin="anonymous" media="all" rel="stylesheet" href="./sample class and object_files/primer-primitives-0b5bee5c70e9.css">
-    <link crossorigin="anonymous" media="all" rel="stylesheet" href="./sample class and object_files/primer-44fa1513ddd0.css">
-    <link crossorigin="anonymous" media="all" rel="stylesheet" href="./sample class and object_files/global-af1512ed1e5e.css">
-    <link crossorigin="anonymous" media="all" rel="stylesheet" href="./sample class and object_files/github-07f750db5d7c.css">
-  <link crossorigin="anonymous" media="all" rel="stylesheet" href="./sample class and object_files/repository-fa69f138fe8d.css">
-<link crossorigin="anonymous" media="all" rel="stylesheet" href="./sample class and object_files/code-111be5e4092d.css">
-
-  
 
 
-  <script type="application/json" id="client-env">{"locale":"en","featureFlags":["code_vulnerability_scanning","copilot_conversational_ux_history_refs","copilot_smell_icebreaker_ux","copilot_implicit_context","failbot_handle_non_errors","geojson_azure_maps","image_metric_tracking","marketing_forms_api_integration_contact_request","marketing_pages_search_explore_provider","turbo_experiment_risky","sample_network_conn_type","no_character_key_shortcuts_in_inputs","react_start_transition_for_navigations","custom_inp","remove_child_patch"]}</script>
-<script crossorigin="anonymous" defer="defer" type="application/javascript" src="./sample class and object_files/wp-runtime-bcfae5519a34.js.download"></script>
-<script crossorigin="anonymous" defer="defer" type="application/javascript" src="./sample class and object_files/vendors-node_modules_dompurify_dist_purify_js-6890e890956f.js.download"></script>
-<script crossorigin="anonymous" defer="defer" type="application/javascript" src="./sample class and object_files/vendors-node_modules_oddbird_popover-polyfill_dist_popover_js-7bd350d761f4.js.download"></script>
-<script crossorigin="anonymous" defer="defer" type="application/javascript" src="./sample class and object_files/vendors-node_modules_smoothscroll-polyfill_dist_smoothscroll_js-node_modules_stacktrace-parse-a448e4-bb5415637fe0.js.download"></script>
-<script crossorigin="anonymous" defer="defer" type="application/javascript" src="./sample class and object_files/environment-d2c4d643d9fb.js.download"></script>
-<script crossorigin="anonymous" defer="defer" type="application/javascript" src="./sample class and object_files/vendors-node_modules_github_selector-observer_dist_index_esm_js-9f960d9b217c.js.download"></script>
-<script crossorigin="anonymous" defer="defer" type="application/javascript" src="./sample class and object_files/vendors-node_modules_primer_behaviors_dist_esm_focus-zone_js-086f7a27bac0.js.download"></script>
-<script crossorigin="anonymous" defer="defer" type="application/javascript" src="./sample class and object_files/vendors-node_modules_github_relative-time-element_dist_index_js-c76945c5961a.js.download"></script>
-<script crossorigin="anonymous" defer="defer" type="application/javascript" src="./sample class and object_files/vendors-node_modules_github_combobox-nav_dist_index_js-node_modules_github_markdown-toolbar-e-820fc0-bc8f02b96749.js.download"></script>
-<script crossorigin="anonymous" defer="defer" type="application/javascript" src="./sample class and object_files/vendors-node_modules_github_auto-complete-element_dist_index_js-03fc21f4e80c.js.download"></script>
-<script crossorigin="anonymous" defer="defer" type="application/javascript" src="./sample class and object_files/vendors-node_modules_github_text-expander-element_dist_index_js-8a621df59e80.js.download"></script>
-<script crossorigin="anonymous" defer="defer" type="application/javascript" src="./sample class and object_files/vendors-node_modules_delegated-events_dist_index_js-node_modules_stacktrace-parser_dist_stack-443cd5-1ba4dbac454f.js.download"></script>
-<script crossorigin="anonymous" defer="defer" type="application/javascript" src="./sample class and object_files/vendors-node_modules_github_filter-input-element_dist_index_js-node_modules_github_remote-inp-b7d8f4-7dc906febe69.js.download"></script>
-<script crossorigin="anonymous" defer="defer" type="application/javascript" src="./sample class and object_files/vendors-node_modules_github_file-attachment-element_dist_index_js-node_modules_primer_view-co-27181b-3509ed8075c4.js.download"></script>
-<script crossorigin="anonymous" defer="defer" type="application/javascript" src="./sample class and object_files/app_assets_modules_github_onfocus_ts-ui_packages_trusted-types-policies_policy_ts-ui_packages-6fe316-30edc9da471c.js.download"></script>
-<script crossorigin="anonymous" defer="defer" type="application/javascript" src="./sample class and object_files/github-elements-34cbf079a4f4.js.download"></script>
-<script crossorigin="anonymous" defer="defer" type="application/javascript" src="./sample class and object_files/element-registry-d2f08f43d466.js.download"></script>
-<script crossorigin="anonymous" defer="defer" type="application/javascript" src="./sample class and object_files/vendors-node_modules_github_catalyst_lib_index_js-node_modules_github_hydro-analytics-client_-4da1df-9de8d527f925.js.download"></script>
-<script crossorigin="anonymous" defer="defer" type="application/javascript" src="./sample class and object_files/vendors-node_modules_github_mini-throttle_dist_index_js-node_modules_stacktrace-parser_dist_s-1acb1c-a745699a1cfa.js.download"></script>
-<script crossorigin="anonymous" defer="defer" type="application/javascript" src="./sample class and object_files/vendors-node_modules_lit-html_lit-html_js-5b376145beff.js.download"></script>
-<script crossorigin="anonymous" defer="defer" type="application/javascript" src="./sample class and object_files/vendors-node_modules_morphdom_dist_morphdom-esm_js-node_modules_github_memoize_dist_esm_index_js-05801f7ca718.js.download"></script>
-<script crossorigin="anonymous" defer="defer" type="application/javascript" src="./sample class and object_files/vendors-node_modules_github_turbo_dist_turbo_es2017-esm_js-c91f4ad18b62.js.download"></script>
-<script crossorigin="anonymous" defer="defer" type="application/javascript" src="./sample class and object_files/vendors-node_modules_github_remote-form_dist_index_js-node_modules_delegated-events_dist_inde-893f9f-a8ec7ed862cf.js.download"></script>
-<script crossorigin="anonymous" defer="defer" type="application/javascript" src="./sample class and object_files/vendors-node_modules_scroll-anchoring_dist_scroll-anchoring_esm_js-node_modules_github_detail-c9d0ba-387cde917623.js.download"></script>
-<script crossorigin="anonymous" defer="defer" type="application/javascript" src="./sample class and object_files/vendors-node_modules_color-convert_index_js-72c9fbde5ad4.js.download"></script>
-<script crossorigin="anonymous" defer="defer" type="application/javascript" src="./sample class and object_files/vendors-node_modules_primer_behaviors_dist_esm_dimensions_js-node_modules_github_jtml_lib_index_js-95b84ee6bc34.js.download"></script>
-<script crossorigin="anonymous" defer="defer" type="application/javascript" src="./sample class and object_files/vendors-node_modules_github_quote-selection_dist_index_js-node_modules_github_session-resume_-84957b-7b4e472db160.js.download"></script>
-<script crossorigin="anonymous" defer="defer" type="application/javascript" src="./sample class and object_files/ui_packages_alive_alive_ts-b956d50b9283.js.download"></script>
-<script crossorigin="anonymous" defer="defer" type="application/javascript" src="./sample class and object_files/app_assets_modules_github_updatable-content_ts-ui_packages_hydro-analytics_hydro-analytics_ts-82813f-ebd80a289a23.js.download"></script>
-<script crossorigin="anonymous" defer="defer" type="application/javascript" src="./sample class and object_files/app_assets_modules_github_behaviors_task-list_ts-app_assets_modules_github_onfocus_ts-app_ass-421cec-9de4213015af.js.download"></script>
-<script crossorigin="anonymous" defer="defer" type="application/javascript" src="./sample class and object_files/app_assets_modules_github_sticky-scroll-into-view_ts-94209c43e6af.js.download"></script>
-<script crossorigin="anonymous" defer="defer" type="application/javascript" src="./sample class and object_files/app_assets_modules_github_behaviors_ajax-error_ts-app_assets_modules_github_behaviors_include-2e2258-05fd80a7ea89.js.download"></script>
-<script crossorigin="anonymous" defer="defer" type="application/javascript" src="./sample class and object_files/app_assets_modules_github_behaviors_commenting_edit_ts-app_assets_modules_github_behaviors_ht-83c235-9285faa0e011.js.download"></script>
-<script crossorigin="anonymous" defer="defer" type="application/javascript" src="./sample class and object_files/behaviors-ac005b67b8cf.js.download"></script>
-<script crossorigin="anonymous" defer="defer" type="application/javascript" src="./sample class and object_files/vendors-node_modules_delegated-events_dist_index_js-node_modules_github_catalyst_lib_index_js-06ff531-2ea61fcc9a71.js.download"></script>
-<script crossorigin="anonymous" defer="defer" type="application/javascript" src="./sample class and object_files/notifications-global-6d6db5144cc3.js.download"></script>
-<script crossorigin="anonymous" defer="defer" type="application/javascript" src="./sample class and object_files/vendors-node_modules_virtualized-list_es_index_js-node_modules_github_template-parts_lib_index_js-878844713bc9.js.download"></script>
-<script crossorigin="anonymous" defer="defer" type="application/javascript" src="./sample class and object_files/vendors-node_modules_github_remote-form_dist_index_js-node_modules_delegated-events_dist_inde-e53a3f-f924cc31bbb1.js.download"></script>
-<script crossorigin="anonymous" defer="defer" type="application/javascript" src="./sample class and object_files/app_assets_modules_github_ref-selector_ts-2b432e185ab2.js.download"></script>
-<script crossorigin="anonymous" defer="defer" type="application/javascript" src="./sample class and object_files/codespaces-b2538b1a6020.js.download"></script>
-<script crossorigin="anonymous" defer="defer" type="application/javascript" src="./sample class and object_files/vendors-node_modules_github_filter-input-element_dist_index_js-node_modules_github_mini-throt-1f9a80-369ba092db4f.js.download"></script>
-<script crossorigin="anonymous" defer="defer" type="application/javascript" src="./sample class and object_files/vendors-node_modules_github_mini-throttle_dist_decorators_js-node_modules_github_remote-form_-737e8d-13881b8e7358.js.download"></script>
-<script crossorigin="anonymous" defer="defer" type="application/javascript" src="./sample class and object_files/vendors-node_modules_github_file-attachment-element_dist_index_js-node_modules_primer_behavio-2144fe-a56c35798651.js.download"></script>
-<script crossorigin="anonymous" defer="defer" type="application/javascript" src="./sample class and object_files/app_assets_modules_github_repositories_get-repo-element_ts-d2345aaf09af.js.download"></script>
-<script crossorigin="anonymous" defer="defer" type="application/javascript" src="./sample class and object_files/repositories-a4f1d005bb44.js.download"></script>
-<script crossorigin="anonymous" defer="defer" type="application/javascript" src="./sample class and object_files/code-menu-67595c3a6d0c.js.download"></script>
-  
+2.Constructor and Destructor
+
+#include <iostream>
+using namespace std;
+
+class MyClass {
+public:
+    MyClass() {
+        cout << "Constructor called." << endl;
+    }
+    ~MyClass() {
+        cout << "Destructor called." << endl;
+    }
+};
+
+int main() {
+    MyClass obj;
+    return 0;
+}
+
+
+3.encapsulation
+
+#include <iostream>
+using namespace std;
+
+class EncapsulationExample {
+private:
+    int secret_value;
+public:
+    void setSecretValue(int value) {
+        secret_value = value;
+    }
+    int getSecretValue() {
+        return secret_value;
+    }
+};
+
+int main() {
+    EncapsulationExample obj;
+    obj.setSecretValue(42);
+    cout << "Secret Value: " << obj.getSecretValue() << endl;
+    return 0;
+}
+
+
+4. Inheritance:
+
+#include <iostream>
+using namespace std;
+
+class Animal {
+public:
+    void speak() {
+        cout << "Animal speaks!" << endl;
+    }
+};
+
+class Dog : public Animal {
+public:
+    void speak() {
+        cout << "Dog barks!" << endl;
+    }
+};
+
+int main() {
+    Dog dog;
+    dog.speak(); // Output: Dog barks!
+    return 0;
+}
+
+
+5.  Polymorphism:
+
+#include <iostream>
+using namespace std;
+
+class Animal {
+public:
+    void speak() {
+        cout << "Animal speaks!" << endl;
+    }
+};
+
+class Dog : public Animal {
+public:
+    void speak() {
+        cout << "Dog barks!" << endl;
+    }
+};
+
+int main() {
+    Dog dog;
+    dog.speak(); // Output: Dog barks!
+    return 0;
+}
+
+
+6.Function overloading:
+
+#include <iostream>
+using namespace std;
+
+class MathOperations {
+public:
+    int add(int a, int b) {
+        return a + b;
+    }
+    double add(double a, double b) {
+        return a + b;
+    }
+};
+
+int main() {
+    MathOperations obj;
+    cout << "Integer Addition: " << obj.add(5, 3) << endl;
+    cout << "Double Addition: " << obj.add(5.5, 3.3) << endl;
+    return 0;
+}
+
+
+7.operator overloading:
+
+#include <iostream>
+using namespace std;
+
+class Complex {
+private:
+    int real, imag;
+public:
+    Complex(int r = 0, int i = 0) : real(r), imag(i) {}
+    Complex operator + (const Complex &obj) {
+        Complex res;
+        res.real = real + obj.real;
+        res.imag = imag + obj.imag;
+        return res;
+    }
+    void display() {
+        cout << real << " + i" << imag << endl;
+    }
+};
+
+int main() {
+    Complex c1(3, 5), c2(2, 7);
+    Complex sum = c1 + c2;
+    sum.display();
+    return 0;
+}
+
+
+8.Static member:
+
+#include <iostream>
+using namespace std;
+
+class Example {
+public:
+    static int count;
+    Example() {
+        count++;
+    }
+    static void showCount() {
+        cout << "Count: " << count << endl;
+    }
+};
+
+int Example::count = 0;
+
+int main() {
+    Example obj1, obj2, obj3;
+    Example::showCount(); // Output: Count: 3
+    return 0;
+}
+
+9. friend functionj:
+
+#include <iostream>
+using namespace std;
+
+class MyClass {
+private:
+    int secret_value;
+public:
+    MyClass(int value) : secret_value(value) {}
+    friend void displaySecretValue(MyClass obj);
+};
+
+void displaySecretValue(MyClass obj) {
+    cout << "Secret Value: " << obj.secret_value << endl;
+}
+
+int main() {
+    MyClass obj(42);
+    displaySecretValue(obj); // Output: Secret Value: 42
+    return 0;
+}
+
+
+10. nested class:
+
+#include <iostream>
+using namespace std;
+
+class Outer {
+private:
+    int outer_value;
+public:
+    class Inner {
+    private:
+        int inner_value;
+    public:
+        void setInnerValue(int value) {
+            inner_value = value;
+        }
+        int getInnerValue() {
+            return inner_value;
+        }
+    };
+    void setOuterValue(int value) {
+        outer_value = value;
+    }
+    int getOuterValue() {
+        return outer_value;
+    }
+};
+
+int main() {
+    Outer obj;
+    Outer::Inner innerObj;
+    obj.setOuterValue(10);
+    innerObj.setInnerValue(20);
+    cout << "Outer Value: " << obj.getOuterValue() << endl;
+    cout << "Inner Value: " << innerObj.getInnerValue() << endl;
+    return 0;
+}
 
   
 
