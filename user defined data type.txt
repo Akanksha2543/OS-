@@ -10,8 +10,8 @@ struct Person {
 int main() {
     vector<Person> people;
 
-    Person p1 = {"Aastha", 17};
-    Person p2 = {"Bipasha", 16};
+    Person p1 = {"Akanksha", 6};
+    Person p2 = {"anushka", 16};
 
     people.push_back(p1);
     people.push_back(p2);
